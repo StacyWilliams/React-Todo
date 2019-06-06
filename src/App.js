@@ -2,53 +2,70 @@ import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
+const todosArray = [
+  {
+    task:'Organize Garage',
+    id: 1528817077286,
+    completed: false
+  },
+  {
+    task: 'Bake Cookies',
+    id: 1528817084358,
+    completed: false
+  },
+  {
+    task: 'DO THE THING',
+    id: 15288170,
+    completed: false
+  },
+  {
+    task: 'Do the other thing',
+    id: 152858,
+    completed: false
+  }
+ ];
+
 class App extends React.Component {
-  constructor() {
-    super();
-   state= {
-   todos: [
-          {
-        task: '',
-        id: Date.now(),
-        completed: false
-      },
-      
-    ],
-    todoInput: ''
+  constructor(props) {
+   super(props);
+   this.state= {todosArray}
+   
+    
+   
    };
   
-   changeHandler = e => {
-      e.preventDefault()
-      this.setState({
-      [e.target.name]: e.target.value
-    })
-    };
+  
 
-    addTodo = e => {
-      e.preventDefault();
+    addTodo = (e, item)=> {
+     
+      console.log(item)
+     
       const newTodo = {
-        task: this.state.todoInput,
+        task: item,
         id: Date.now(),
         completed: false
-      };
-    }
+
+      }
       this.setState({
-      task: [...this.state.todos, newTodo],
-      todoInput: ''
-}
-);
-   
+        todosArray: [...this.state.todosArray, newTodo],
+        todoInput: ''
   
+  
+        });
+      };
+
+       
   render() {
+    console.log('testing')
     return (
       <div>
         <h2>Stacy's Todo List!</h2>
-        <TodoList todo={this.state.todos} />
-        <TodoForm todoInput={this.state.todoInput} changeHandler={this.changeHandler} addTodo={this.state.addTodo} />
+        <TodoList todosArray={this.state.todosArray} />
+        <TodoForm  addTodo={this.addTodo} />
       </div>
     );
-  }
-};
+  };
+  
 }
 
 export default App;
