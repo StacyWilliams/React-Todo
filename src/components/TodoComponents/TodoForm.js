@@ -10,6 +10,17 @@ class TodoForm extends React.Component {
         
     };
 
+    toggleItem = itemId => {
+      this.setState({
+      todosArray: this.state.todosArray.map(item => {
+      if (itemId === item.id) {
+      return { ...item, completed: !item.completed };
+      }
+      return item;
+      })
+      });
+      };
+
       submit =(e) =>{
         e.preventDefault()
         this.props.addTodo(e, this.state.inputTodo)
