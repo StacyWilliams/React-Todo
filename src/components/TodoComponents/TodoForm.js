@@ -1,4 +1,5 @@
 import React from 'react';
+import './Todo.css';
 
 class TodoForm extends React.Component {
     constructor(props) {
@@ -35,13 +36,18 @@ class TodoForm extends React.Component {
              onChange={this.changeHandler}
             />
             
+          <div>  
             
-            <button>Submit</button>
-            
-          </form>
-            
-            <button>Clear Completed</button>
+            <button class='submit'>Submit</button>
             </div>
+            </form>
+          
+            
+            <div>
+            <button class= 'clear'>Clear Completed</button>
+            </div>
+            </div>
+            
     )
 }
 

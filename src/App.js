@@ -38,7 +38,7 @@ class App extends React.Component {
 
     addTodo = (e, item)=> {
      
-      console.log(item)
+      console.log('itemProps', item)
      
       const newTodo = {
         task: item,
@@ -56,10 +56,10 @@ class App extends React.Component {
 
        
   render() {
-    console.log('testing')
+    console.log('todoList')
     return (
       <div>
-        <h2>Stacy's Todo List!</h2>
+        <h2 class='header'>Stacy's Todo List!</h2>
         <TodoList todosArray={this.state.todosArray} />
         <TodoForm  addTodo={this.addTodo} />
       </div>
