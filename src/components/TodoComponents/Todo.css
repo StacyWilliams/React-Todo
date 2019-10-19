@@ -1,0 +1,105 @@
+body {
+    width: 500px;
+    height: 100%;
+    
+    font-family: cursive;
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    background-color: seagreen;
+   
+} 
+.container{
+     width: 350px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border: 2px solid black;
+    background-color:black;
+    border-color: greenyellow;
+    border-radius:5% 5%;
+    
+    
+    -webkit-box-shadow: 10px 20px 80px 15px greenyellow;
+
+    
+}
+.todoItem{
+    width: 100%;
+    box-shadow: 5px 5px 2.5px greenyellow;
+    background-image: linear-gradient(lightgreen, green);  
+    color: black;
+    margin: 10px 55px;
+    border-radius: 0 15%;
+}
+
+.todoItem p {
+    display: flex;
+    justify-content: center;
+    
+}
+.todoList {
+    font-weight: bold;
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    
+ }
+
+ .todoItem.completed {
+    text-decoration: line-through;
+   } 
+
+   
+.header {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    color: greenyellow;
+    
+    margin:10px 30px;;
+  
+}
+form {
+    display: flex;
+    justify-content: center;
+    border-radius: 25%;
+    margin-left: 30px;
+   
+    border-color: greenyellow;
+ }
+
+ input{
+     font-weight: bold;
+     border-color: silver;
+     background-color: greenyellow;
+     margin:10px 15px;
+     box-shadow: 1px 1px 1.25px silver;
+ }
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    box-shadow: 3px 3px 1.25px silver;
+    background-image: linear-gradient(lightgreen, green);
+    border-radius:5%;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin: 15px 0;
+}
+
+.clear {
+   
+     width: 150px;
+    height: 20px; 
+    margin: 10px 85px;
+} 
