@@ -1,4 +1,4 @@
 # React-Todo
 
 
-![TodoList](/images/completedTodoList.png)
+![TodoList](/completedTodoList.png)
